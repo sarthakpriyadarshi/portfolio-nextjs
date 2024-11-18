@@ -7,6 +7,7 @@ import Certification from '@/components/Certification';
 import Education from '@/components/Education';
 import Experience from "@/components/Experience";
 import TechStack from "@/components/TechStack";
+import Project from "@/components/Project";
 import Footer from "@/components/Footer";
 
 export default function Main() {
@@ -21,9 +22,10 @@ export default function Main() {
             <Certification />
             <Experience />
             <Education />
+            <Project />
             <Footer />
             {/* Ink Cursor */}
-            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-50">
+            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
                 {inkCursorComponent}
             </div>
         </div>
