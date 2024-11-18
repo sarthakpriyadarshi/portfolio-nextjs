@@ -1,6 +1,5 @@
 // components/TechStack.tsx
 import React from "react";
-import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaPython } from "react-icons/fa";
 import styled from "styled-components";
 
 // Define a type for the tech stack items

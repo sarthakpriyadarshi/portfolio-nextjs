@@ -2,8 +2,6 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeSwitcher"; // Import the ThemeProvider component
 import { Doto, Orbitron, Rajdhani } from "next/font/google";
-import dynamic from "next/dynamic"; // Import dynamic for client-side only component
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
 const rajdhani = Rajdhani({

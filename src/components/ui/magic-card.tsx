@@ -44,7 +44,9 @@ function MagicContainer({ children, className }: MagicContainerProps) {
 
    useLayoutEffect(() => {
       init()
-      containerRef.current && setBoxes(Array.from(containerRef.current.children).map(el => el as HTMLElement))
+      if (containerRef.current) {
+         setBoxes(Array.from(containerRef.current.children).map(el => el as HTMLElement))
+      }
       window.addEventListener('resize', init)
 
       return () => {
@@ -54,7 +56,7 @@ function MagicContainer({ children, className }: MagicContainerProps) {
 
    useEffect(() => {
       onMouseMove()
-   }, [mousePosition])
+   }, [mousePosition]) // Adding `mousePosition` as a dependency
 
    const init = () => {
       if (containerRef.current) {
@@ -102,15 +104,17 @@ interface MagicCardProps {
    isolated?: boolean
    background?: string
    borderColor?: string
-   [key: string]: any
+   [key: string]: string | number | ReactNode | undefined
 }
 
 const MagicCard: React.FC<MagicCardProps> = ({
                                                 className,
                                                 children,
                                                 size = 600,
+                                                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                                                 spotlight = true,
                                                 borderColor = 'hsl(0 0% 98%)',
+                                                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                                                 isolated = true,
                                                 spotlightColor = 'rgba(255,255,255,0.03)',
                                                 ...props
