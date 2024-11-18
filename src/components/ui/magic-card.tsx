@@ -1,7 +1,7 @@
 'use client'
 
 import type { CSSProperties, ReactElement, ReactNode } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useLayoutEffect } from 'react'
 import { ny } from '@/lib/utils'
 
 interface MousePosition {
@@ -42,22 +42,15 @@ function MagicContainer({ children, className }: MagicContainerProps) {
    const containerSize = useRef<{ w: number, h: number }>({ w: 0, h: 0 })
    const [boxes, setBoxes] = useState<Array<HTMLElement>>([])
 
-   useEffect(() => {
+   useLayoutEffect(() => {
       init()
-      containerRef.current
-      && setBoxes(
-         Array.from(containerRef.current.children).map(el => el as HTMLElement),
-      )
-   }, [])
-
-   useEffect(() => {
-      init()
+      containerRef.current && setBoxes(Array.from(containerRef.current.children).map(el => el as HTMLElement))
       window.addEventListener('resize', init)
 
       return () => {
          window.removeEventListener('resize', init)
       }
-   }, [setBoxes])
+   }, [])
 
    useEffect(() => {
       onMouseMove()
@@ -81,124 +74,66 @@ function MagicContainer({ children, className }: MagicContainerProps) {
          mouse.current.x = x
          mouse.current.y = y
          boxes.forEach((box) => {
-            const boxX
-          = -(box.getBoundingClientRect().left - rect.left) + mouse.current.x
-            const boxY
-          = -(box.getBoundingClientRect().top - rect.top) + mouse.current.y
+            const boxX = -(box.getBoundingClientRect().left - rect.left) + mouse.current.x
+            const boxY = -(box.getBoundingClientRect().top - rect.top) + mouse.current.y
             box.style.setProperty('--mouse-x', `${boxX}px`)
             box.style.setProperty('--mouse-y', `${boxY}px`)
 
-            if (inside)
-               box.style.setProperty('--opacity', `1`)
+            if (inside) box.style.setProperty('--opacity', `1`)
             else box.style.setProperty('--opacity', `0`)
          })
       }
    }
 
    return (
-      <div className={ny('size-full', className)} ref={containerRef}>
-         {children}
-      </div>
+       <div className={ny('size-full', className)} ref={containerRef}>
+          {children}
+       </div>
    )
 }
 
 interface MagicCardProps {
-   /**
-    * @default <div />
-    * @type ReactElement
-    * @description
-    * The component to be rendered as the card
-    */
    as?: ReactElement
-   /**
-    * @default ""
-    * @type string
-    * @description
-    * The className of the card
-    */
    className?: string
-
-   /**
-    * @default ""
-    * @type ReactNode
-    * @description
-    * The children of the card
-    */
    children?: ReactNode
-
-   /**
-    * @default 600
-    * @type number
-    * @description
-    * The size of the spotlight effect in pixels
-    */
    size?: number
-
-   /**
-    * @default true
-    * @type boolean
-    * @description
-    * Whether to show the spotlight
-    */
    spotlight?: boolean
-
-   /**
-    * @default "rgba(255,255,255,0.03)"
-    * @type string
-    * @description
-    * The color of the spotlight
-    */
    spotlightColor?: string
-
-   /**
-    * @default true
-    * @type boolean
-    * @description
-    * Whether to isolate the card which is being hovered
-    */
    isolated?: boolean
-
-   /**
-    * @default "rgba(255,255,255,0.03)"
-    * @type string
-    * @description
-    * The background of the card
-    */
    background?: string
-
+   borderColor?: string
    [key: string]: any
 }
 
 const MagicCard: React.FC<MagicCardProps> = ({
-   className,
-   children,
-   size = 600,
-   spotlight = true,
-   borderColor = 'hsl(0 0% 98%)',
-   isolated = true,
-   ...props
-}) => {
+                                                className,
+                                                children,
+                                                size = 600,
+                                                spotlight = true,
+                                                borderColor = 'hsl(0 0% 98%)',
+                                                isolated = true,
+                                                spotlightColor = 'rgba(255,255,255,0.03)',
+                                                ...props
+                                             }) => {
    return (
-      <div
-         style={
-            {
-               '--mask-size': `${size}px`,
-               '--border-color': "#0f0f0f",
-            } as CSSProperties
-         }
-         className={ny(
-            'relative z-0 size-full rounded-2xl p-10',
-            'bg-gray-300 dark:bg-gray-700',
-            'bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),var(--border-color),transparent_100%)]',
-            className,
-         )}
-         {...props}
-      >
-         {children}
-
-         {/* Background */}
-         <div className="absolute inset-px -z-20 rounded-2xl bg-white dark:bg-black/95" />
-      </div>
+       <div
+           style={{
+              '--mask-size': `${size}px`,
+              '--border-color': borderColor,
+              '--spotlight-color': spotlightColor,
+           } as CSSProperties}
+           className={ny(
+               'relative z-0 size-full rounded-2xl p-10',
+               'bg-gray-300 dark:bg-gray-700',
+               'bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),var(--border-color),transparent_100%)]',
+               className
+           )}
+           {...props}
+       >
+          {children}
+          {/* Background */}
+          <div className="absolute inset-px -z-20 rounded-2xl bg-white dark:bg-black/95" />
+       </div>
    )
 }
 

@@ -73,7 +73,7 @@ export function NavigationMenu({ lenis }: { lenis: React.RefObject<Lenis | null>
     return (
         <div className="w-full flex justify-center z-40">
             {/* Mobile Navigation */}
-            <div className="fixed bottom-8 right-4 md:hidden">
+            <div className="fixed bottom-8 right-4 md:hidden z-50">
                 <FloatingDock
                     mobileClassName="bottom-0"
                     lenis={lenis}

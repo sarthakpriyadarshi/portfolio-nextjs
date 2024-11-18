@@ -56,12 +56,16 @@ const FloatingDockMobile = ({
     };
 
     return (
-        <div className={cn("relative block md:hidden", className)}>
+        <div className={cn("relative block md:hidden", className)} style={{ position: 'relative', zIndex: 9999 }}>
             <AnimatePresence>
                 {open && (
                     <motion.div
                         layoutId="nav"
                         className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-3"
+                        style={{
+                            zIndex: 9999, // Ensure menu is on top of everything
+                            position: "absolute", // Keep menu absolutely positioned
+                        }}
                     >
                         {items.map((item, idx) => (
                             <motion.div
@@ -78,6 +82,10 @@ const FloatingDockMobile = ({
                                 <button
                                     onClick={() => handleNavigation(item.href)}
                                     className="h-12 w-12 rounded-full bg-gray-50 dark:bg-yellow-700 flex items-center justify-center"
+                                    style={{
+                                        zIndex: 10001, // Ensure button stays above the menu
+                                        position: "relative", // Button needs to be positioned for z-index
+                                    }}
                                 >
                                     <div className="h-6 w-6">{item.icon}</div>
                                 </button>
@@ -89,12 +97,19 @@ const FloatingDockMobile = ({
             <button
                 onClick={() => setOpen(!open)}
                 className="h-14 w-14 rounded-full bg-gray-50 dark:bg-yellow-500 flex items-center justify-center"
+                style={{
+                    zIndex: 10001, // Ensure button is above the menu
+                    position: "relative", // Button should be positioned for z-index
+                }}
             >
                 <IconLayoutNavbarCollapse className="h-6 w-6 text-neutral-500 dark:text-white" />
             </button>
         </div>
     );
 };
+
+
+
 
 const FloatingDockDesktop = ({
                                  items,
