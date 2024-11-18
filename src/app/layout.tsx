@@ -27,6 +27,8 @@ const orbitron = Orbitron({
     subsets: ["latin"],
     variable: "--font-orbitron",
 })
+
+
 export default function RootLayout({
                                        children,
                                    }: Readonly<{

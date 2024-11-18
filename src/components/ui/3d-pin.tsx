@@ -47,10 +47,9 @@ export const PinContainer = ({
             >
                 <div
                     style={{
-                        transform: transform,
-                        margin: "0px", // Remove unnecessary margin
+                        transform: transform// Remove unnecessary margin
                     }}
-                    className="absolute left-1/2 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 transform scale-100 sm:scale-85 md:scale-75 lg:scale-70 min-w-[200px] min-h-[200px] sm:mx-1"
+                    className="absolute left-1/2 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 transform scale-100 min-w-[150px] min-h-[200px] sm:mx-2"
                 >
                     {/* Adding scale properties to children */}
                     <div className={cn("relative z-50", className)}>

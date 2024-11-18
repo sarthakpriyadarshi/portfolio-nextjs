@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <div className="min-h-72 bg-background flex items-center justify-center py-7 px-4 md:px-10">
             <ShineBorder
-                className="relative flex flex-col w-full max-w-screen-lg mx-auto items-center justify-center overflow-hidden rounded-lg border p-6 shadow-xl"
+                className="relative flex flex-col w-full max-w-screen-lg mx-auto items-center justify-center overflow-hidden rounded-lg border p-6 shadow-xl z-10"
                 color={['#ffffff', '#131313', '#FFBE7B']}
             >
                 <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -20,7 +20,7 @@ export default function Footer() {
                         </h3>
                         <ShinyButton text="Contact Me"/>
                     </div>
-                    <div className="flex justify-center space-x-6 mb-8 mt-10 relative z-20">
+                    <div className="flex justify-center space-x-6 mb-8 mt-10 relative z-10">
                         <a
                             href="https://github.com/yourusername" // Replace with your GitHub URL
                             target="_blank"
