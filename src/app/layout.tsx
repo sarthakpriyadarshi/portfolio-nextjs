@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeSwitcher"; // Import the ThemeProvider component
 import {Doto, Orbitron, Rajdhani} from "next/font/google";
+
 
 const rajdhani = Rajdhani({
     weight: "400", // You can choose the font weights you need
@@ -34,8 +33,13 @@ export default function RootLayout({
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
+
     return (
         <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Sarthak Priyadarshi | CyberOL</title>
+        </head>
         <body
             className={`${doto.variable} ${rajdhani.variable} ${orbitron.variable} ${rajdhani700.variable} antialiased bg-background  text-foreground`}
         >

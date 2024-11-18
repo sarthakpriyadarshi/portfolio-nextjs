@@ -43,7 +43,7 @@ export default function Education () {
         },
     ];
     return (
-        <div className="min-h-72 bg-background flex items-center justify-center py-7 px-4 md:px-10">
+        <div className="min-h-72 bg-background flex items-center justify-center py-7 px-4 md:px-10" id="education">
             <ShineBorder
                 className="relative flex flex-col w-full max-w-screen-lg mx-auto items-center justify-center overflow-hidden rounded-lg border p-6 shadow-xl z-10" color={['#ffffff', '#131313', '#FFBE7B']}>
                 <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">

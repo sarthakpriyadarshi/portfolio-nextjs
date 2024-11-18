@@ -2,10 +2,11 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import icons from react-icons
 import ShinyButton from '@/components/ui/shiny-button'
 import ShineBorder from "@/components/ui/shine-border";
+import CopyEmailButton from "@/components/ui/CopyEmailButton";
 
 export default function Footer() {
     return (
-        <div className="min-h-72 bg-background flex items-center justify-center py-7 px-4 md:px-10">
+        <div className="min-h-72 bg-background flex items-center justify-center py-7 px-4 md:px-10" id="footer">
             <ShineBorder
                 className="relative flex flex-col w-full max-w-screen-lg mx-auto items-center justify-center overflow-hidden rounded-lg border p-6 shadow-xl z-10"
                 color={['#ffffff', '#131313', '#FFBE7B']}
@@ -18,7 +19,17 @@ export default function Footer() {
                         <h3 className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
                             Interested in collaborating or want to know more about my work? Reach out to me directly!
                         </h3>
-                        <ShinyButton text="Contact Me"/>
+                        <div className="flex justify-center items-center space-x-4">
+                            <a
+                                href="https://example.com/download-cv"
+                                target="_blank"
+                                style={{textDecoration: 'none'}}
+                            >
+                                <ShinyButton text="Contact Me"/>
+                            </a>
+                            <CopyEmailButton/>
+                        </div>
+
                     </div>
                     <div className="flex justify-center space-x-6 mb-8 mt-10 relative z-10">
                         <a
@@ -27,7 +38,7 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="text-sm md:text-xl"
                         >
-                            <FaGithub
+                        <FaGithub
                                 className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-400 transition duration-300"/>
                         </a>
                         <a
