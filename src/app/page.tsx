@@ -1,4 +1,5 @@
 "use client";
+
 import Lenis from "@studio-freight/lenis";
 import useInkCursor from "@/hooks/inkCursor";
 import { useRef, useEffect } from "react";
@@ -10,6 +11,9 @@ import TechStack from "@/components/TechStack";
 import Project from "@/components/Project";
 import Footer from "@/components/Footer";
 import { NavigationMenu } from "@/components/NavigationMenu";
+import LoadingScreen from "@/components/ui/LoadingScreen";
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
 
 export default function Main() {
     const inkCursorComponent = useInkCursor();
@@ -36,20 +40,23 @@ export default function Main() {
     }, []);
 
     return (
-        <div ref={containerRef} className="relative">
-            {/* Sections */}
-            <NavigationMenu lenis={lenis} />
-            <Hero />
-            <TechStack />
-            <Certification />
-            <Experience />
-            <Education />
-            <Project />
-            <Footer />
-            {/* Ink Cursor */}
-            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-                {inkCursorComponent}
-            </div>
+        <div ref={containerRef} className="relative ">
+
+            <LoadingScreen />
+
+                {/* Sections wrapped with SimpleBar */}
+                <NavigationMenu lenis={lenis} />
+                <Hero />
+                <TechStack />
+                <Certification />
+                <Experience />
+                <Education />
+                <Project />
+                <Footer />
+                {/* Ink Cursor */}
+                <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+                    {inkCursorComponent}
+                </div>
         </div>
     );
 }

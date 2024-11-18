@@ -71,9 +71,9 @@ export function NavigationMenu({ lenis }: { lenis: React.RefObject<Lenis | null>
     };
 
     return (
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center z-40">
             {/* Mobile Navigation */}
-            <div className="fixed bottom-8 right-4 z-50 md:hidden">
+            <div className="fixed bottom-8 right-4 md:hidden">
                 <FloatingDock
                     mobileClassName="bottom-0"
                     lenis={lenis}
@@ -85,7 +85,7 @@ export function NavigationMenu({ lenis }: { lenis: React.RefObject<Lenis | null>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 hidden md:block">
+            <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-40 hidden md:block">
                 <FloatingDock
                     lenis={lenis}
                     items={links.map((link) => ({
