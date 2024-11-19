@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex items-center justify-center bg-background relative px-4 pt-5 pb-7 md:px-10 mt-3 md:mt-16" id="hero">
             <ShineBorder
                 className="relative flex flex-col md:flex-row w-full max-w-screen-lg mx-auto items-center md:items-start justify-center overflow-hidden rounded-lg border bg-background p-6 md:p-10 shadow-xl z-10"
-                color={['#ffffff', '#131313', '#FFBE7B']}
+                color={['#d5c596', '#ffbe7b', '#f3be16']}
             >
                 {/* Text Content */}
                 <div className="flex flex-col md:flex-row justify-center items-center w-full mt-4">

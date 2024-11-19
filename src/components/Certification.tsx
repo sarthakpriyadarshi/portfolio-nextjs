@@ -9,7 +9,7 @@ export default function Certification() {
     return (
         <div className="min-h-72 bg-background flex items-center justify-center py-7 px-4 md:px-10" id="certification">
             <ShineBorder
-                className="relative flex flex-col w-full max-w-screen-lg mx-auto items-center justify-center overflow-hidden rounded-lg border p-6 shadow-xl z-10" color={['#ffffff', '#131313', '#FFBE7B']}>
+                className="relative flex flex-col w-full max-w-screen-lg mx-auto items-center justify-center overflow-hidden rounded-lg border p-6 shadow-xl z-10" color={['#d5c596', '#ffbe7b', '#f3be16']}>
                 <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl text-center">
                     Certified to break things
                 </h2>

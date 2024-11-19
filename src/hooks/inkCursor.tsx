@@ -77,8 +77,8 @@ const useInkCursor = () => {
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-expect-error
                 const gradient = ctxRef.current.createLinearGradient(0, 0, canvas.width, canvas.height);
-                gradient.addColorStop(0, "#ffffff");
-                gradient.addColorStop(1, "#616161");
+                gradient.addColorStop(0, "#df8216");
+                gradient.addColorStop(1, "#ffbe7b");
 
                 ctxRef.current.strokeStyle = gradient;
 
