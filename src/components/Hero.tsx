@@ -17,18 +17,18 @@ export default function Home() {
                 {/* Text Content */}
                 <div className="flex flex-col md:flex-row justify-center items-center w-full mt-4">
                     {/* Text and Buttons Div */}
-                    <div className="flex flex-col items-start justify-center w-full md:w-[50%] px-4 mb-8 md:mb-0">
-                        <h1 className="z-10 whitespace-pre-wrap text-left text-3xl md:text-5xl font-medium tracking-tighter text-black dark:text-white mb-3">
+                    <div className="flex flex-col items-start justify-center w-full md:w-[50%] px-6 md:px-8 mb-8 md:mb-0">
+                        <h1 className="z-10 whitespace-pre-wrap text-left text-3xl md:text-5xl font-medium tracking-tighter text-black dark:text-white mb-6">
                             SARTHAK PRIYADARSHI
                         </h1>
-                        <h2 className="z-10 whitespace-pre-wrap text-left text-lg md:text-xl tracking-tighter text-black dark:text-white mb-10">
-                            An Ethical Hacker and Penetration Tester
+                        <h2 className="z-10 whitespace-pre-wrap text-left text-lg md:text-xl tracking-tighter text-black dark:text-white mb-8">
+                            Ethical Hacker and Penetration Tester
                         </h2>
-                        <div className="flex justify-center space-x-6 mb-8 mt-1 z-10">
+                        <div className="flex justify-center space-x-6 mb-10 mt-2 z-10">
                             <a
                                 href="https://example.com/download-cv"
                                 target="_blank"
-                                style={{textDecoration: 'none'}}
+                                style={{ textDecoration: 'none' }}
                             >
                                 <FaGithub
                                     className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-400 transition duration-300"
@@ -45,18 +45,16 @@ export default function Home() {
                                 />
                             </a>
                         </div>
-                        <p className="text-left text-base md:text-sm lg:text-xl mb-6 break-words">
-                            I am a Penetration Tester, A Developer from India. I specialize in Black Box Penetration
-                            Testing
-                            and Web Development.
+                        <p className="text-justify text-base md:text-sm lg:text-xl mb-6 break-words">
+                            I am a Penetration Tester and Developer from India. I specialize in black-box penetration
+                            testing and web development.
                         </p>
-                        <p className="text-left text-base md:text-sm lg:text-xl mb-6">
-                            I mean love Developers too, because they give me the opportunity to exploit them.
+                        <p className="text-justify text-base md:text-sm lg:text-xl mb-6">
+                            I have a deep appreciation for developers—they give me the opportunity to test and improve their systems.
                         </p>
-                        <p className="text-left text-base md:text-sm lg:text-xl mb-8 break-words">
-                            I am proficient at Python, Java, Bash Scripting, Linux & Windows Administration, Networking,
-                            and
-                            have basic knowledge of the MERN Stack.
+                        <p className="text-justify text-base md:text-sm lg:text-xl mb-8 break-words">
+                            My technical expertise includes proficiency in Python, Java, Bash scripting, Linux and Windows
+                            administration, and networking. Additionally, I have a foundational knowledge of the MERN stack.
                         </p>
 
                         {/* Buttons side by side */}
@@ -64,16 +62,16 @@ export default function Home() {
                             <a
                                 href="https://example.com/download-cv"
                                 target="_blank"
-                                style={{textDecoration: 'none'}}
+                                style={{ textDecoration: 'none' }}
                             >
-                                <ShinyButton text="Download CV"/>
+                                <ShinyButton text="Download CV" />
                             </a>
-                            <CopyEmailButton/>
+                            <CopyEmailButton />
                         </div>
                     </div>
 
                     {/* Image Div */}
-                    <div className="flex justify-center items-center w-full md:w-[50%] mt-4 md:mt-0 z-10">
+                    <div className="flex justify-center items-center w-full md:w-[50%] mt-8 md:mt-0 md:ml-8 z-10">
                         <Image
                             src="/image.jpg" // Adjust with the correct path
                             alt="Profile"
@@ -83,6 +81,7 @@ export default function Home() {
                         />
                     </div>
                 </div>
+
 
 
                 {/* Dot Pattern */}

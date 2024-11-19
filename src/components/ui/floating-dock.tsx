@@ -81,7 +81,7 @@ const FloatingDockMobile = ({
                             >
                                 <button
                                     onClick={() => handleNavigation(item.href)}
-                                    className="h-12 w-12 rounded-full bg-gray-50 dark:bg-yellow-700 flex items-center justify-center"
+                                    className="h-12 w-12 rounded-full bg-gray-50 dark:bg-[#df8216] flex items-center justify-center"
                                     style={{
                                         zIndex: 10001, // Ensure button stays above the menu
                                         position: "relative", // Button needs to be positioned for z-index
@@ -96,7 +96,7 @@ const FloatingDockMobile = ({
             </AnimatePresence>
             <button
                 onClick={() => setOpen(!open)}
-                className="h-14 w-14 rounded-full bg-gray-50 dark:bg-yellow-500 flex items-center justify-center"
+                className="h-14 w-14 rounded-full bg-gray-50 dark:bg-[#df8216] flex items-center justify-center"
                 style={{
                     zIndex: 10001, // Ensure button is above the menu
                     position: "relative", // Button should be positioned for z-index

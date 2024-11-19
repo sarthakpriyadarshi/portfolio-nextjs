@@ -44,19 +44,20 @@ export default function Main() {
 
             <LoadingScreen />
 
-                {/* Sections wrapped with SimpleBar */}
-                <NavigationMenu lenis={lenis} />
-                <Hero />
-                <TechStack />
-                <Certification />
-                <Experience />
-                <Education />
-                <Project />
-                <Footer />
-                {/* Ink Cursor */}
-                <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-                    {inkCursorComponent}
-                </div>
+            {/* Sections wrapped with SimpleBar */}
+            <NavigationMenu lenis={lenis} />
+            <Hero />
+            <TechStack />
+            <Certification />
+            <Experience />
+            <Education />
+            <Project />
+            <Footer />
+
+            {/* Ink Cursor - Hidden on smaller devices */}
+            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 hidden md:block">
+                {inkCursorComponent}
+            </div>
         </div>
     );
 }
