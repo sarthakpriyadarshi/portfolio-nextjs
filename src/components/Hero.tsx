@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import CopyEmailButton from '@/components/ui/CopyEmailButton';
 import React from "react";
 import Image from 'next/image';
+import Tilt from 'react-parallax-tilt';
 
 export default function Home() {
     return (
@@ -71,7 +72,9 @@ export default function Home() {
                     </div>
 
                     {/* Image Div */}
+
                     <div className="flex justify-center items-center w-full md:w-[50%] mt-8 md:mt-0 md:ml-8 z-10">
+                        <Tilt tiltMaxAngleX={7} tiltMaxAngleY={7}>
                         <Image
                             src="/image.jpg" // Adjust with the correct path
                             alt="Profile"
@@ -79,7 +82,9 @@ export default function Home() {
                             height={600}     // Set base height (adjust for aspect ratio)
                             className="rounded-lg border max-w-full h-auto"
                         />
+                    </Tilt>
                     </div>
+
                 </div>
 
 

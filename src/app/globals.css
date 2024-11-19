@@ -72,6 +72,37 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  /* WebKit-based browsers (Chrome, Safari, Edge) */
+  body::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background for the track */
+    border-radius: 10px; /* Rounded corners for the track */
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #3e3e3e; /* Slightly lighter dark gray for the thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #1e1e1e; /* Adds spacing between thumb and track */
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: #5e5e5e; /* Lighter gray for hover state */
+  }
+
+  /* For Firefox */
+  html {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #3e3e3e #1e1e1e; /* Thumb and track colors */
+  }
+
+  body {
+    scrollbar-gutter: stable both-edges; /* Ensures consistent space for scrollbars */
+  }
+
+
   h1, h2, h3 {
     font-family: var(--font-doto), sans-serif;
   }
@@ -135,4 +166,6 @@ body {
   .color-timeline-title {
     color: #df8216;
   }
+
+
 }
