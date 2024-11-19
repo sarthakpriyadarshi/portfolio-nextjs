@@ -4,6 +4,7 @@ import { MagicCard, MagicContainer } from '@/components/ui/magic-card';
 import { Button } from "@/components/ui/button";
 import React from "react";
 import ShineBorder from "@/components/ui/shine-border";
+import Image from "next/image";
 
 export default function Certification() {
     return (
@@ -21,9 +22,11 @@ export default function Certification() {
                     <MagicCard
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
-                        <img
-                            src="ceh.png"
+                        <Image
+                            src="/ceh.png"
                             alt="CERTIFICATIONS"
+                            width={100} // Adjust width
+                            height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
@@ -42,9 +45,11 @@ export default function Certification() {
                     <MagicCard
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
-                        <img
-                            src="ceh-practical.png"
+                        <Image
+                            src="/ceh-practical.png"
                             alt="CERTIFICATIONS"
+                            width={100} // Adjust width
+                            height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
@@ -63,9 +68,11 @@ export default function Certification() {
                     <MagicCard
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
-                        <img
-                            src="ceh-master.png"
+                        <Image
+                            src="/ceh-master.png"
                             alt="CERTIFICATIONS"
+                            width={100} // Adjust width
+                            height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] lg:max-h-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
@@ -85,9 +92,11 @@ export default function Certification() {
                     <MagicCard
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
-                        <img
-                            src="pen-100.png"
+                        <Image
+                            src="/pen-100.png"
                             alt="CERTIFICATIONS"
+                            width={100} // Adjust width
+                            height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
@@ -106,9 +115,11 @@ export default function Certification() {
                     <MagicCard
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
-                        <img
-                            src="cnss.png"
+                        <Image
+                            src="/cnss.png"
                             alt="CERTIFICATIONS"
+                            width={100} // Adjust width
+                            height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
@@ -127,9 +138,11 @@ export default function Certification() {
                     <MagicCard
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
-                        <img
-                            src="oscp.svg"
+                        <Image
+                            src="/oscp.svg"
                             alt="CERTIFICATIONS"
+                            width={100} // Adjust width
+                            height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] lg:max-h-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
