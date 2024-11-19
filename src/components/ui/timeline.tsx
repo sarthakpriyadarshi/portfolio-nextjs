@@ -1,8 +1,6 @@
 "use client";
 
 import {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    useMotionValueEvent,
     useScroll,
     useTransform,
     motion,
@@ -34,6 +32,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+    // Direct color change once scroll reaches a certain position
+    const circleColor = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1],  // Threshold scroll progress: start, halfway, and end
+        ["#595959", "#f3be16", "#f3be16"] // Color changes to yellow at 100% scroll
+    );
+
+    const titleColor = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1],  // Same threshold for title as the circle
+        ["#444444", "#444444", "#f3be16"] // Title color changes to yellow at 100% scroll
+    );
+
     return (
         <div
             className="w-full bg-white dark:bg-black font-sans md:px-10"
@@ -46,12 +57,27 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         className="flex justify-start pt-10 md:pt-40 md:gap-10"
                     >
                         <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-                            <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
-                                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-black border border-neutral-300 dark:border-neutral-700 p-2" />
-                            </div>
-                            <h3 className="hidden md:block text-lg md:pl-20 md:text-4xl font-bold text-neutral-500 dark:text-neutral-500 ">
+                            <motion.div
+                                className="h-10 w-10 absolute left-3 md:left-3 rounded-full flex items-center justify-center"
+                                style={{
+                                    backgroundColor: "rgb(35,35,35)", // Dull background for outer circle
+                                }}
+                            >
+                                <motion.div
+                                    className="h-4 w-4 rounded-full border border-neutral-300 dark:border-neutral-700"
+                                    style={{
+                                        backgroundColor: circleColor, // Direct color change for the inner circle
+                                    }}
+                                />
+                            </motion.div>
+                            <motion.h3
+                                className="hidden md:block text-lg md:pl-20 md:text-4xl font-bold"
+                                style={{
+                                    color: titleColor, // Direct color change for title
+                                }}
+                            >
                                 {item.title}
-                            </h3>
+                            </motion.h3>
                         </div>
 
                         <div className="relative pl-20 pr-4 md:pl-4 w-full">
@@ -73,7 +99,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             height: heightTransform,
                             opacity: opacityTransform,
                         }}
-                        className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-gray-500 via-[#df8216] to-transparent from-[0%] via-[10%] rounded-full"
+                        className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-gray-500 via-[#df8216] to-transparent from-[0%] via-[10%] rounded-full"
                     />
                 </div>
             </div>

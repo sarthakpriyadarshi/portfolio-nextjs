@@ -131,4 +131,8 @@ body {
   .font-change {
     font-family: var(--font-rajdhani700), sans-serif;
   }
+
+  .color-timeline-title {
+    color: #df8216;
+  }
 }

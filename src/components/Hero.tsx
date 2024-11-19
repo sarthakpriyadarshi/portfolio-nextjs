@@ -96,7 +96,6 @@ export default function Home() {
                     )}
                 />
             </ShineBorder>
-
             {/* Ink cursor component */}
         </div>
     );
