@@ -60,7 +60,7 @@ export default function Home() {
                         {/* Buttons side by side */}
                         <div className="flex justify-center items-center space-x-4">
                             <a
-                                href="https://example.com/download-cv"
+                                href="resume.pdf"
                                 target="_blank"
                                 style={{ textDecoration: 'none' }}
                             >

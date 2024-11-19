@@ -55,8 +55,8 @@ export default function RootLayout({
 
             {/* Favicon */}
             <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-            <link rel="icon" href="/favicon.png" type="image/png" />
-            <link rel="apple-touch-icon" href="/favicon.png" />
+            <link rel="icon" href="/src/app/favicon.png" type="image/png" />
+            <link rel="apple-touch-icon" href="/src/app/favicon.png" />
         </head>
         <body
             className={`${doto.variable} ${rajdhani.variable} ${orbitron.variable} ${rajdhani700.variable} antialiased bg-background text-foreground`}

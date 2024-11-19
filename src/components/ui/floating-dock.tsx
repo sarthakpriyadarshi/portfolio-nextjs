@@ -56,12 +56,12 @@ const FloatingDockMobile = ({
     };
 
     return (
-        <div className={cn("relative block md:hidden", className)} style={{ position: 'relative', zIndex: 9999 }}>
+        <div className={cn("relative block md:hidden", className)} style={{ position: "relative", zIndex: 9999 }}>
             <AnimatePresence>
                 {open && (
                     <motion.div
                         layoutId="nav"
-                        className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-3"
+                        className="absolute bottom-full mb-2 inset-x-0 flex flex-col items-center gap-3"
                         style={{
                             zIndex: 9999, // Ensure menu is on top of everything
                             position: "absolute", // Keep menu absolutely positioned
@@ -107,9 +107,6 @@ const FloatingDockMobile = ({
         </div>
     );
 };
-
-
-
 
 const FloatingDockDesktop = ({
                                  items,

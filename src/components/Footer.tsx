@@ -21,7 +21,7 @@ export default function Footer() {
                         </h3>
                         <div className="flex justify-center items-center space-x-4">
                             <a
-                                href="https://example.com/download-cv"
+                                href="tel:+917017714872"
                                 target="_blank"
                                 style={{textDecoration: 'none'}}
                             >
@@ -33,7 +33,7 @@ export default function Footer() {
                     </div>
                     <div className="flex justify-center space-x-6 mb-8 mt-10 relative z-10">
                         <a
-                            href="https://github.com/yourusername" // Replace with your GitHub URL
+                            href="https://github.com/sarthakpriyadarshi" // Replace with your GitHub URL
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm md:text-xl"
@@ -42,7 +42,7 @@ export default function Footer() {
                                 className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-400 transition duration-300"/>
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/yourusername" // Replace with your LinkedIn URL
+                            href="https://www.linkedin.com/in/sarthakpriyadarshi" // Replace with your LinkedIn URL
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm md:text-xl"
