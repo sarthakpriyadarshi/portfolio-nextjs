@@ -82,7 +82,7 @@ export default function Main() {
             {isDesktop && (
                 <Particles
                     className="absolute inset-0"
-                    quantity={550}
+                    quantity={300}
                     ease={80}
                     size={0.8}
                     color="#ffffff"

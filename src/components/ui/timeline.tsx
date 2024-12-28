@@ -26,23 +26,24 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start 10%", "end 50%"],
+        offset: ["start center", "end center"], // Adjusted offsets
     });
 
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
-    // Direct color change once scroll reaches a certain position
+    // Smooth gradient color transition for the circle
     const circleColor = useTransform(
         scrollYProgress,
-        [0, 0.5, 1],  // Threshold scroll progress: start, halfway, and end
-        ["#595959", "#f3be16", "#f3be16"] // Color changes to yellow at 100% scroll
+        [0, 0.25, 0.5, 0.75, 1], // Fine-grained thresholds for smoother transition
+        ["#595959", "#9f7d1a", "#f3be16", "#f3be16", "#f3be16"] // Smooth gradient between colors
     );
 
+    // Smooth gradient color transition for the title
     const titleColor = useTransform(
         scrollYProgress,
-        [0, 0.5, 1],  // Same threshold for title as the circle
-        ["#444444", "#444444", "#f3be16"] // Title color changes to yellow at 100% scroll
+        [0, 0.25, 0.5, 0.75, 1], // Same thresholds for consistency
+        ["#444444", "#6e5531", "#f3be16", "#f3be16", "#f3be16"] // Smooth gradient between colors
     );
 
     return (
@@ -66,14 +67,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                 <motion.div
                                     className="h-4 w-4 rounded-full border border-neutral-300 dark:border-neutral-700"
                                     style={{
-                                        backgroundColor: circleColor, // Direct color change for the inner circle
+                                        backgroundColor: circleColor, // Smooth gradient transition for the inner circle
                                     }}
                                 />
                             </motion.div>
                             <motion.h3
                                 className="hidden md:block text-lg md:pl-20 md:text-4xl font-bold"
                                 style={{
-                                    color: titleColor, // Direct color change for title
+                                    color: titleColor, // Smooth gradient transition for title
                                 }}
                             >
                                 {item.title}
@@ -84,7 +85,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                                 {item.title}
                             </h3>
-                            {item.content}{" "}
+                            {item.content}
                         </div>
                     </div>
                 ))}

@@ -27,7 +27,7 @@ export default function Home() {
                         </h2>
                         <div className="flex justify-center space-x-6 mb-10 mt-2 z-10">
                             <a
-                                href="https://example.com/download-cv"
+                                href="https://github.com/sarthakpriyadarshi"
                                 target="_blank"
                                 style={{ textDecoration: 'none' }}
                             >
@@ -36,7 +36,7 @@ export default function Home() {
                                 />
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/yourusername" // Replace with your LinkedIn URL
+                                href="https://www.linkedin.com/in/sarthakpriyadarshi" // Replace with your LinkedIn URL
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm md:text-xl"

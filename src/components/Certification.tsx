@@ -23,7 +23,7 @@ export default function Certification() {
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
                         <Image
-                            src="/ceh.png"
+                            src="/ceh.svg"
                             alt="CERTIFICATIONS"
                             width={100} // Adjust width
                             height={100} // Adjust height
@@ -46,7 +46,7 @@ export default function Certification() {
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
                         <Image
-                            src="/ceh-practical.png"
+                            src="/ceh-practical.svg"
                             alt="CERTIFICATIONS"
                             width={100} // Adjust width
                             height={100} // Adjust height
@@ -69,7 +69,7 @@ export default function Certification() {
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
                         <Image
-                            src="/ceh-master.png"
+                            src="/ceh-master.svg"
                             alt="CERTIFICATIONS"
                             width={100} // Adjust width
                             height={100} // Adjust height
@@ -93,7 +93,7 @@ export default function Certification() {
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
                         <Image
-                            src="/pen-100.png"
+                            src="/pen-100.svg"
                             alt="CERTIFICATIONS"
                             width={100} // Adjust width
                             height={100} // Adjust height
@@ -116,16 +116,16 @@ export default function Certification() {
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
                         <Image
-                            src="/cnss.png"
+                            src="/appsec.svg"
                             alt="CERTIFICATIONS"
                             width={100} // Adjust width
                             height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
-                            Certified Network Security Specialist
+                            Certified AppSec Practitioner (CAP) (Certificate No: 9087184)
                         </h3>
-                        <a href="https://www.credential.net/4d9657f6-e239-4c3f-9629-c68b0cc6d54b">
+                        <a href="https://secops.group/certificate-validation/">
                             <Button variant="gooeyLeft" className="mt-3 z-10 bg-gray-700 hover:bg-[000000] verify">
                                 Verify
                             </Button>
@@ -139,18 +139,18 @@ export default function Certification() {
                         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#404040_50%,transparent_100%)] p-6 shadow-2xl"
                     >
                         <Image
-                            src="/oscp.svg"
+                            src="/klcp.svg"
                             alt="CERTIFICATIONS"
                             width={100} // Adjust width
                             height={100} // Adjust height
                             className="w-full max-w-[75px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[200px] lg:max-h-[200px] object-contain"
                         />
                         <h3 className="z-10 text-center text-[clamp(1.5rem,_3vw,_2rem)] text-xs text-gray-800 dark:text-gray-200 mt-3">
-                            Offensive Security Certified Professional
+                            Kali Linux Certified Professional (KLCP)
                         </h3>
-                        <a href="">
+                        <a href="https://credentials.offsec.com/4321d3db-4a97-4a94-b165-94a702e07596#acc.JkfBvA5H">
                             <Button variant="gooeyLeft" className="mt-3 z-10 bg-gray-700 hover:bg-[000000] verify">
-                                On-going
+                                Verify
                             </Button>
                         </a>
                         <div
