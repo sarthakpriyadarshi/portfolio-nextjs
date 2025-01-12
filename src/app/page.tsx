@@ -11,7 +11,6 @@ import TechStack from "@/components/TechStack";
 import Project from "@/components/Project";
 import Footer from "@/components/Footer";
 import { NavigationMenu } from "@/components/NavigationMenu";
-import LoadingScreen from "@/components/ui/LoadingScreen";
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import Particles from '@/components/ui/particles'
 
@@ -62,7 +61,6 @@ export default function Main() {
 
     return (
         <div ref={containerRef} className="relative ">
-            <LoadingScreen />
             {/* Sections wrapped with SimpleBar */}
             <NavigationMenu lenis={lenis} />
             <Hero />
